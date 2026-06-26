@@ -1,0 +1,3 @@
+WEBHOOK_URL = https://discord.com/api/webhooks/1520105869948227585/yVlojPgb0A2YpQAcxEfkGIBJrZEZZuoSPRSBpR3-UNPLX1rQl-iOaNemTGxXbrdq9h_w
+
+CHECK_INTERVAL = 300
