@@ -1,16 +1,9 @@
-import requests
-from bs4 import BeautifulSoup
+from parser import get_latest_patch
+from notifier import send_discord
 
-URL = "https://mapleplanet.co.kr/board/update"
+WEBHOOK_URL = https://discord.com/api/webhooks/1520105869948227585/yVlojPgb0A2YpQAcxEfkGIBJrZEZZuoSPRSBpR3-UNPLX1rQl-iOaNemTGxXbrdq9h_w
 
-headers = {
-    "User-Agent": "Mozilla/5.0"
-}
+latest = get_latest_patch()
 
-response = requests.get(URL, headers=headers)
-
-print(response.status_code)
-
-soup = BeautifulSoup(response.text, "lxml")
-
-print(soup.title.text)
+if latest:
+    send_discord(WEBHOOK_URL, latest)
